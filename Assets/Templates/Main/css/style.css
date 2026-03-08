@@ -1,9 +1,12 @@
-/********** Template CSS **********/
 :root {
-  --primary: #1e60aa;
-  --secondary: #ff4917;
-  --light: #edf1fc;
-  --dark: #17224d;
+  --primary: #216154;
+  /* Emerald Green */
+  --secondary: #c5a059;
+  /* Gold */
+  --light: #f4f7f6;
+  /* Off-white background */
+  --dark: #0b1f13;
+  /* Deep Forest */
 }
 
 .fw-medium {
@@ -236,7 +239,7 @@
   background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   color: var(--light);
 }
 

@@ -1,35 +1,36 @@
 :root {
-    /* Modern Color Palette */
-    --primary-hue: 215;
-    --primary-sat: 90%;
-    --primary-light: 55%;
+    /* ✨ Luxe Emerald & Gold Palette ✨ */
+    --primary-hue: 165;
+    --primary-sat: 60%;
+    --primary-light: 35%;
     --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
-    --primary-dark: hsl(var(--primary-hue), var(--primary-sat), 40%);
-    --primary-glow: hsla(var(--primary-hue), var(--primary-sat), var(--primary-light), 0.3);
+    --primary-dark: hsl(var(--primary-hue), var(--primary-sat), 25%);
+    --primary-glow: hsla(var(--primary-hue), var(--primary-sat), var(--primary-light), 0.4);
 
-    --secondary: #ff6b6b;
-    /* Vibrant Coral */
-    --accent: #4ecdc4;
-    /* Teal */
+    --secondary: #c5a059;
+    /* Sophisticated Gold */
+    --accent: #27ae60;
+    /* Verdant Green */
 
-    --bg-body: #f8f9fa;
+    --bg-body: #f4f7f6;
     --bg-surface: #ffffff;
-    --text-main: #2d3436;
-    --text-muted: #636e72;
+    --text-main: #1a2521;
+    --text-muted: #53635e;
 
-    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, hsl(200, 90%, 60%) 100%);
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, hsl(var(--primary-hue), 70%, 50%) 100%);
+    --gradient-gold: linear-gradient(135deg, #c5a059 0%, #e6be75 100%);
 
     /* Spacing & Radius */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --radius-pill: 50rem;
+    --radius-sm: 10px;
+    --radius-md: 20px;
+    --radius-lg: 32px;
+    --radius-pill: 100px;
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
-    --shadow-glow: 0 0 20px var(--primary-glow);
+    --shadow-sm: 0 4px 12px rgba(0, 40, 30, 0.05);
+    --shadow-md: 0 12px 32px rgba(0, 40, 30, 0.08);
+    --shadow-lg: 0 24px 64px rgba(0, 40, 30, 0.12);
+    --shadow-glow: 0 0 25px var(--primary-glow);
 }
 
 /* Global Typography & Reset */
@@ -78,26 +79,27 @@ h6 {
 
 .navbar-brand h1 {
     font-weight: 800;
-    background: var(--gradient-primary);
+    background: var(--gradient-gold);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.8rem;
+    letter-spacing: -1px;
 }
 
 .navbar-light .navbar-nav .nav-link {
     font-weight: 600;
     color: var(--text-muted) !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: var(--radius-sm);
+    padding: 0.5rem 1.2rem !important;
+    border-radius: var(--radius-pill);
     transition: all 0.3s ease;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
     color: var(--primary) !important;
-    background: rgba(var(--primary-hue), 10%, 95%, 0.1);
-    transform: translateY(-1px);
+    background: rgba(var(--primary-hue), 30%, 90%, 0.5);
+    transform: translateY(-2px);
 }
 
 /* Buttons */
@@ -158,12 +160,10 @@ h6 {
 
 /* Footer */
 .footer {
-    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d) !important;
-    /* Fallback/Example gradient? Maybe too much. Let's stick to theme */
-    background: #17224d !important;
-    /* Keep original dark */
+    background: linear-gradient(135deg, #0b1f13 0%, #153a24 100%) !important;
     position: relative;
     overflow: hidden;
+    color: #cbd5d0;
 }
 
 .footer::before {
@@ -222,4 +222,31 @@ h6 {
     transform: scale(1.1) rotate(10deg);
     background-color: var(--primary) !important;
     color: white !important;
+}
+
+/* Theme Sync Utilities */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-secondary {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
 }
