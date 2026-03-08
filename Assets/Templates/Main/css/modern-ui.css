@@ -1,23 +1,23 @@
 :root {
-    /* ✨ Luxe Emerald & Gold Palette ✨ */
-    --primary-hue: 165;
-    --primary-sat: 60%;
-    --primary-light: 35%;
+    /* 🌹 Luxe Ruby & Gold Palette 🌹 */
+    --primary-hue: 345;
+    --primary-sat: 75%;
+    --primary-light: 40%;
     --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
     --primary-dark: hsl(var(--primary-hue), var(--primary-sat), 25%);
     --primary-glow: hsla(var(--primary-hue), var(--primary-sat), var(--primary-light), 0.4);
 
     --secondary: #c5a059;
     /* Sophisticated Gold */
-    --accent: #27ae60;
-    /* Verdant Green */
+    --accent: #e74c3c;
+    /* Vibrant Red */
 
-    --bg-body: #f4f7f6;
+    --bg-body: #fff9f9;
     --bg-surface: #ffffff;
-    --text-main: #1a2521;
-    --text-muted: #53635e;
+    --text-main: #2d1a1a;
+    --text-muted: #6b5353;
 
-    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, hsl(var(--primary-hue), 70%, 50%) 100%);
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, hsl(var(--primary-hue), 85%, 55%) 100%);
     --gradient-gold: linear-gradient(135deg, #c5a059 0%, #e6be75 100%);
 
     /* Spacing & Radius */
@@ -27,15 +27,15 @@
     --radius-pill: 100px;
 
     /* Shadows */
-    --shadow-sm: 0 4px 12px rgba(0, 40, 30, 0.05);
-    --shadow-md: 0 12px 32px rgba(0, 40, 30, 0.08);
-    --shadow-lg: 0 24px 64px rgba(0, 40, 30, 0.12);
+    --shadow-sm: 0 4px 12px rgba(40, 0, 10, 0.05);
+    --shadow-md: 0 12px 32px rgba(40, 0, 10, 0.08);
+    --shadow-lg: 0 24px 64px rgba(40, 0, 10, 0.12);
     --shadow-glow: 0 0 25px var(--primary-glow);
 }
 
 /* Global Typography & Reset */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     /* Utilizing the likely included font */
     background-color: var(--bg-body);
     color: var(--text-main);
@@ -48,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     /* Ensure headings use Inter or Roboto if preferred */
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -160,7 +160,7 @@ h6 {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #0b1f13 0%, #153a24 100%) !important;
+    background: linear-gradient(135deg, #2d0a0a 0%, #5c1414 100%) !important;
     position: relative;
     overflow: hidden;
     color: #cbd5d0;

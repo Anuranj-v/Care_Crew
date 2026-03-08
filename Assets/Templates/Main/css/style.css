@@ -1,12 +1,12 @@
 :root {
-  --primary: #216154;
-  /* Emerald Green */
+  --primary: #9b2226;
+  /* Ruby Red */
   --secondary: #c5a059;
   /* Gold */
-  --light: #f4f7f6;
-  /* Off-white background */
-  --dark: #0b1f13;
-  /* Deep Forest */
+  --light: #fff9f9;
+  /* Light pinkish-white background */
+  --dark: #2d0a0a;
+  /* Deep Maroon */
 }
 
 .fw-medium {
