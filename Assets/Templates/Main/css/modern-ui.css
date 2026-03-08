@@ -1,0 +1,225 @@
+:root {
+    /* Modern Color Palette */
+    --primary-hue: 215;
+    --primary-sat: 90%;
+    --primary-light: 55%;
+    --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
+    --primary-dark: hsl(var(--primary-hue), var(--primary-sat), 40%);
+    --primary-glow: hsla(var(--primary-hue), var(--primary-sat), var(--primary-light), 0.3);
+
+    --secondary: #ff6b6b;
+    /* Vibrant Coral */
+    --accent: #4ecdc4;
+    /* Teal */
+
+    --bg-body: #f8f9fa;
+    --bg-surface: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, hsl(200, 90%, 60%) 100%);
+
+    /* Spacing & Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 50rem;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 20px var(--primary-glow);
+}
+
+/* Global Typography & Reset */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Utilizing the likely included font */
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif;
+    /* Ensure headings use Inter or Roboto if preferred */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow-md);
+}
+
+/* Navbar Modernization */
+.nav-bar {
+    padding: 1rem 2rem !important;
+    /* Override template */
+}
+
+.navbar {
+    background: var(--bg-surface) !important;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+    padding: 1rem !important;
+}
+
+.navbar-brand h1 {
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--text-muted) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+    background: rgba(var(--primary-hue), 10%, 95%, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Buttons */
+.btn {
+    border-radius: var(--radius-pill);
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    background-size: 200% auto;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+}
+
+.btn-primary {
+    background-image: var(--gradient-primary);
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+/* Heroes & Banners */
+.page-header,
+.header-carousel .owl-carousel-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before,
+.header-carousel .owl-carousel-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(23, 34, 77, 0.3), rgba(23, 34, 77, 0.8));
+    z-index: 1;
+}
+
+/* Services / Cards */
+.service-item,
+.team-item,
+.card {
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.service-item:hover,
+.team-item:hover,
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d) !important;
+    /* Fallback/Example gradient? Maybe too much. Let's stick to theme */
+    background: #17224d !important;
+    /* Keep original dark */
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    filter: blur(100px);
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
+/* Micro-animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: var(--radius-sm);
+    border: 1px solid #e0e0e0;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px var(--primary-glow);
+    border-color: var(--primary);
+}
+
+/* Topbar social icons */
+.top-bar .btn-sm-square {
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.top-bar .btn-sm-square:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: var(--primary) !important;
+    color: white !important;
+}

@@ -1,0 +1,112 @@
+/* Premium Dark Theme Overrides for Material Dashboard */
+
+body.dark-version {
+    background-color: #1a2035 !important;
+    color: #ffffff !important;
+}
+
+.dark-version .bg-gray-200 {
+    background-color: #1a2035 !important;
+}
+
+.dark-version .card {
+    background-color: #202940 !important;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4), 0 7px 10px -5px rgba(233, 30, 99, 0.4) !important;
+    color: #ffffff;
+}
+
+.dark-version .card .card-header {
+    color: #ffffff;
+}
+
+.dark-version .text-dark,
+.dark-version .text-secondary,
+.dark-version .text-muted {
+    color: #ced4da !important;
+}
+
+.dark-version .navbar-vertical {
+    background-color: #202940 !important;
+}
+
+.dark-version .navbar-vertical .nav-link {
+    color: #ffffff !important;
+}
+
+.dark-version .navbar-vertical .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Forms & Inputs */
+.dark-version .form-control,
+.dark-version .input-group-outline .form-control {
+    background-color: #202940 !important;
+    border: 1px solid #4b5563 !important;
+    color: #ffffff !important;
+}
+
+.dark-version .form-control:focus {
+    border-color: #e91e63 !important;
+    box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.25);
+}
+
+.dark-version .input-group-outline.is-filled .form-label,
+.dark-version .input-group-outline.is-focused .form-label {
+    background-color: #202940 !important;
+    color: #e91e63 !important;
+}
+
+.dark-version .input-group-outline .form-label {
+    color: #9ca3af;
+}
+
+/* Tables */
+.dark-version .table> :not(caption)>*>* {
+    background-color: transparent !important;
+    color: #ffffff;
+    border-bottom-color: #4b5563;
+}
+
+.dark-version .table-responsive {
+    background-color: #202940;
+}
+
+/* Typography */
+.dark-version h1,
+.dark-version h2,
+.dark-version h3,
+.dark-version h4,
+.dark-version h5,
+.dark-version h6 {
+    color: #ffffff !important;
+}
+
+.dark-version hr.dark {
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+}
+
+/* Buttons */
+.dark-version .btn-link.text-dark {
+    color: #ffffff !important;
+}
+
+/* Navbar utilities */
+.dark-version .navbar-main .breadcrumb-item.text-dark {
+    color: #ffffff !important;
+}
+
+.dark-version .navbar-main .font-weight-bolder {
+    color: #ffffff !important;
+}
+
+/* Sidenav */
+.dark-version .sidenav {
+    background-color: #202940 !important;
+    border-right: 1px solid #374151;
+}
+
+/* Stats Cards Icons */
+.dark-version .icon-shape {
+    background-color: #374151;
+    /* Fallback if gradient fails */
+}
