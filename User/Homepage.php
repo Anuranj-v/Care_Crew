@@ -81,7 +81,7 @@ session_start();
                     <a href="about.php" class="nav-item nav-link">About</a>
                     <a href="service.php" class="nav-item nav-link">Services</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
-                    <a href="Myprofile.php" class="nav-item nav-link">Profile</a>
+                    <a href="MyProfile.php" class="nav-item nav-link">Profile</a>
                     <a href="MyBooking.php" class="nav-item nav-link">Booking</a>
                     <a href="Complaint.php" class="nav-item nav-link">Complaint</a>
                     <!-- <a href="Feedback.php" class="nav-item nav-link">Feedback</a> -->
@@ -158,15 +158,15 @@ session_start();
     <!-- Testimonial Start -->
  <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
     <?php
-    $selRating = "SELECT r.*, u.user_name 
+$selRating = "SELECT r.*, u.user_name 
                   FROM tbl_rating r
                   INNER JOIN tbl_user u ON r.user_id = u.user_id
                   ORDER BY r.rating_date DESC LIMIT 6";
-    $resRating = $Con->query($selRating);
+$resRating = $Con->query($selRating);
 
-    if($resRating->num_rows > 0){
-        while($rt = $resRating->fetch_assoc()) {
-    ?>
+if ($resRating->num_rows > 0) {
+    while ($rt = $resRating->fetch_assoc()) {
+?>
     <div class="testimonial-item text-center">
         <div class="testimonial-text bg-light text-center p-4 mb-4">
             <p class="mb-0"><?php echo htmlspecialchars($rt['rating_comment']); ?></p>
@@ -175,15 +175,20 @@ session_start();
              src="../Assets/Templates/Main/img/test 1.jpg" 
              style="width: 80px; height: 80px;">
         <div class="mb-2">
-            <?php for($i=1; $i<=5; $i++){ ?>
-                <small class="fa fa-star <?php echo ($i <= $rt['rating_value']) ? 'text-secondary' : 'text-muted'; ?>"></small>
-            <?php } ?>
+            <?php for ($i = 1; $i <= 5; $i++) { ?>
+                <small class="fa fa-star <?php echo($i <= $rt['rating_value']) ? 'text-secondary' : 'text-muted'; ?>"></small>
+            <?php
+        }?>
         </div>
         <h5 class="mb-1"><?php echo htmlspecialchars($rt['user_name']); ?></h5>
     </div>
-    <?php } } else { ?>
+    <?php
+    }
+}
+else { ?>
         <p class='text-center'>No ratings yet.</p>
-    <?php } ?>
+    <?php
+}?>
 </div>
 
     <!-- Testimonial End -->

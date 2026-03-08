@@ -92,7 +92,7 @@ include("../Assets/Connection/Connection.php");
                     <a href="about.php" class="nav-item nav-link">About</a>
                     <a href="service.php" class="nav-item nav-link">Services</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
-                    <a href="Myprofile.php" class="nav-item nav-link">Profile</a>
+                    <a href="MyProfile.php" class="nav-item nav-link">Profile</a>
                     <a href="MyBooking.php" class="nav-item nav-link">Booking</a>
                     <a href="Complaint.php" class="nav-item nav-link">Complaint</a>
                     <!-- <a href="Feedback.php" class="nav-item nav-link">Feedback</a> -->

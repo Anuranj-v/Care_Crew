@@ -92,7 +92,7 @@ session_start();
                     <!-- <a href="about.php" class="nav-item nav-link">About</a>
                     <a href="service.php" class="nav-item nav-link">Services</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a> -->
-                    <a href="Myprofile.php" class="nav-item nav-link">Profile</a> 
+                    <a href="MyProfile.php" class="nav-item nav-link">Profile</a> 
                     <a href="ViewBooking.php" class="nav-item nav-link">Jobs</a>
                     <a href="CompletedWork.php" class="nav-item nav-link">Completed Works</a>
                     <a href="../index.php" class="nav-item nav-link">Logout</a>
@@ -101,7 +101,7 @@ session_start();
                     <a href="about.php" class="nav-item nav-link">About</a>
                     <a href="service.php" class="nav-item nav-link">Services</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
-                    <a href="Myprofile.php" class="nav-item nav-link">Profile</a>
+                    <a href="MyProfile.php" class="nav-item nav-link">Profile</a>
                     <a href="MyBooking.php" class="nav-item nav-link">Booking</a>
                     <a href="ViewWorker.php" class="nav-item nav-link">Worker</a>
                     <a href="Logout.php.php" class="nav-item nav-link">Logout</a> -->
